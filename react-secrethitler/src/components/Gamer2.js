@@ -21,14 +21,22 @@ class Game extends React.Component {
             <div>
                 <div className="Game">
                 <header className="Game-header">
-                    <p>
-                    Hello World! Welcome to Secret Hitler!
-                    <br /> Number of players: {this.state.players}
                     {this.state.players === 0 
-                    ? <div><ChoosePlayers setplayers={this.setplayers}/></div>
+                    ? 
+                    <div className='border border-primary m-5 p-5 rounded'>
+                        Welcome to Secret Hitler!
+                        <br /><ChoosePlayers setplayers={this.setplayers}/>
+                    </div>
                     : <div></div>}
-                    
-                    </p>
+
+
+                    {this.state.players > 0
+                    ?
+                    <div>
+                        {this.state.players} players! Alright! Lets get started then!
+                    </div>
+                    : <div></div>
+                    }
                 </header>
                 </div>
             </div>
