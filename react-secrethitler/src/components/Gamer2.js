@@ -9,6 +9,7 @@ class Game extends React.Component {
         super(props)
         this.state={
             players: 0,
+            playerNames: [],
             playerstats: [],
             playerfascists: [],
             playerhitler: [],
@@ -17,9 +18,10 @@ class Game extends React.Component {
             stagetwo: false,
         }
     }
-    setplayers=(event)=>{
+    setplayers=(number, playerNames)=>{
         this.setState({
-            players: event.target.value,
+            players: number,
+            playerNames: playerNames,
             stagezero: true
         })
     }
@@ -66,7 +68,7 @@ class Game extends React.Component {
                     <div>
                         {this.state.players} players! Alright! Lets get started then!
                         
-                        <InitializePlayers players={this.state.players} setplayer={this.setplayer} setplayerfascists={this.setplayerfascists} setplayerhitler={this.setplayerhitler}/>
+                        <InitializePlayers players={this.state.players} setplayer={this.setplayer} setplayerfascists={this.setplayerfascists} setplayerhitler={this.setplayerhitler} playerNames ={this.state.playerNames}/>
 
                         {this.state.playerstats !== []?
                         <div className='border border-primary m-5 p-5 rounded'>
