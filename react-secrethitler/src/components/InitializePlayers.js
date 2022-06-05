@@ -26,7 +26,8 @@ class InitializePlayers extends React.Component{
             let player = {
                 name: this.props.playerNames[i],
                 role: shuffledallroles[i],
-                party: ""
+                party: "",
+                alive: true
             }
             if (shuffledallroles[i] === "a Liberal"){
                 player.party = "Liberal"

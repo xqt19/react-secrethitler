@@ -27,9 +27,9 @@ class RevealIDBox extends React.Component{
                     {this.state.person.name}:<br />
                     You are {this.state.person.role} from the {this.state.person.party} Party!
                     <br /> ---------- <br />
-                    {this.state.person.role === "a Liberal"?<div>Help the other Liberals pass FIVE Liberal policies!</div>:<div></div>}
-                    {this.state.person.role === "a Fascist"?<div>Help the other Fascists pass SIX Fascist policies <br />OR<br /> Elect Hitler as Chancellor after 3 Fascist policies have been passed!</div>:<div></div>}
-                    {this.state.person.role === "Hitler"?<div>Help the other Fascists pass SIX Fascist policies <br />OR <br/> Be elected Chancellor after 3 Fascist policies have been passed!</div>:<div></div>}
+                    {this.state.person.role === "a Liberal"?<div>Help the other Liberals enact FIVE Liberal policies!</div>:<div></div>}
+                    {this.state.person.role === "a Fascist"?<div>Help the other Fascists enact SIX Fascist policies <br />OR<br /> Elect Hitler as Chancellor after 3 Fascist policies have been passed!</div>:<div></div>}
+                    {this.state.person.role === "Hitler"?<div>Help the other Fascists enact SIX Fascist policies <br />OR <br/> Be elected Chancellor after 3 Fascist policies have been passed!</div>:<div></div>}
                     <br /> ---------- <br />
                     {this.state.person.role === "a Liberal"?<div>As a Liberal you do not know the identities of any of the other players.</div>:<div></div>}
                     {this.state.person.role === "a Fascist"?<div>You know the identities of the Fascists. They are:<br />
