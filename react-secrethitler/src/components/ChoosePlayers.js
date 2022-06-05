@@ -83,7 +83,7 @@ class ChoosePlayers extends React.Component{
                     Please select number of players:
                     <br />
                     <div className='d-flex'>
-                        <button className='btn btn-primary mx-5' value="5" onClick={this.props.setplayers}>5</button>
+                        <button className='btn btn-primary mx-5' value="5" onClick={this.setplayers}>5</button>
                         <button className='btn btn-primary mx-5' value="6" onClick={this.setplayers}>6</button>
                         <button className='btn btn-primary mx-5' value="7" onClick={this.setplayers}>7</button>                        
                     </div>                    

@@ -3,6 +3,7 @@ import './Gamer2.css';
 import ChoosePlayers from './ChoosePlayers.js'
 import InitializePlayers from './InitializePlayers';
 import RevealIDBox from './RevealIDBox';
+import StageTwoGame from './StageTwoGame';
 
 class Game extends React.Component {
     constructor(props){
@@ -93,7 +94,19 @@ class Game extends React.Component {
 
                 
                 {this.state.stageone === true && this.state.stagetwo === false? 
-                <div>Ready for Stage 2</div>
+                <div>Ready for Stage 2
+                    <p> ---------- </p>
+                    <StageTwoGame playerhitler={this.state.playerhitler} playerstats={this.state.playerstats} playernames={this.state.playerNames}/>
+                    <p> ---------- </p>
+                    Players can re-examine their identity at any time:
+                    <ul>
+                        {this.state.playerstats.map((person, index) => (
+                            <li key={index}>
+                            <RevealIDBox  key={index} players={this.state.players} person={person} fascists={this.state.playerfascists} hitler ={this.state.playerhitler}/>
+                            </li>
+                        ))}                               
+                    </ul>
+                </div>
                 :<div></div>
                 }
                 </header>
