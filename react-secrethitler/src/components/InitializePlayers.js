@@ -24,7 +24,7 @@ class InitializePlayers extends React.Component{
         let hitler = []
         for (let i = 0; i < shuffledallroles.length; i++) {
             let player = {
-                name: "Player"+(parseInt(i)+1),
+                name: this.props.playerNames[i],
                 role: shuffledallroles[i],
                 party: ""
             }
